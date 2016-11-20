@@ -1,0 +1,120 @@
+@font-face{
+    font-family: 'HanShu';
+    src:url('../font/HYQiHei-25J.ttf');
+}
+body,html{
+    height:100%;
+}
+body{
+    background: #e6e6e6;
+    font-family: 'HanShu';
+    color: #222;
+    font-weight: bold;
+}
+*::selection{
+    background: #e6e6e6;
+}
+a{
+    font-size:80%;
+    text-decoration: none;
+    color:#222;
+}
+li{
+    list-style: none;
+}
+main:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+header{
+    background: url("../img/41.jpg") no-repeat center center;
+    background-size: cover;
+    height:30%;
+    min-height: 300px;
+}
+h1{
+    position: absolute;
+    top:40%;
+    left: 50%;
+    -webkit-transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%);
+    transform:translate(-50%,-50%);
+    font-size: 3rem;
+}
+.wrap{
+    height:100%;
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+main h2{
+    font-size: 2rem;
+    width:100%;
+    text-align: center;
+}
+nav{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+nav li{
+    font-size:0.8rem;
+    text-align: center;
+    width:24%;
+    display: inline-block;
+}
+nav li:hover{
+    transition: color 300ms ease-out;
+    color: #3db1f4;
+    cursor:pointer;
+    text-shadow: 1px 1px 3px #3db1f4;
+}
+.left-part{
+    margin-top:10px;
+    float: left;
+    width:60%;
+    height:100px;
+}
+.main-content{
+    width:99%;
+    border:1px solid #bbb;
+}
+.right-part {
+    width: 40%;
+    height: 600px;
+    float: left;
+    /*background: #ff0000;*/
+    min-width: 200px;
+}
+.introduce-part{
+    margin-top:10px;
+    text-align: center;
+    min-width:200px;
+    min-height: 200px;
+    border:1px solid #8d8d8d;
+    padding:10px 50px;
+}
+.link-me{
+    margin-top:20px;
+    min-width:200px;
+    border:1px solid #8d8d8d;
+}
+.icons{
+    display: inline-block;
+    padding: 30px 66px;
+}
+.icons img{
+    padding:0 20px;
+}
+.recommend-part{
+    text-align: center;
+    margin-top:20px;
+    min-width:200px;
+    min-height:200px;
+    border:1px solid #8d8d8d;
+}
+footer p{
+    margin:0;
+    text-align: center;
+}
