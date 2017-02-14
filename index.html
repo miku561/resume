@@ -1,58 +1,63 @@
 <!doctype html>
 <html>
 <head>
-    <title>博客</title>
-    <meta name="viewport"  content="width=device-width" initial-scale="1.0" />
+    <title>简历</title>
+    <meta name="viewport"  content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" href="text/css" href="css/main.css">
 </head>
 <body>
-    <header>
-        <div class="wrap">
-          <h1>欢迎访问我的博客</h1>
-       </div>
-    </header>
-    <main>
-        <h2>目 录</h2>
-        <nav class="wrap">
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>构建工具</li>
-            <li>生活杂记</li>
-        </nav>
-        <div class="wrap">
-            <div class="left-part"  id="contentPart">
-                <div class="main-content">
-                    <h3>这是正文部分</h3>
-                </div>
-            </div>
-            <div class="right-part">
-                <div class="introduce-part">
-                    <h2>欢迎</h2>
-                    <p>这是一个技术博客，记录自己学习的点点滴滴</p>
-                </div>
-                <div class="link-me">
-                    <div class="icons">
-                        <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACoklEQVRYR8VWgVEbMRC8qyBQQUIFkAoCFUSqAKggTgVxKkioAFOBrgPsCogrCHRAB5tZj/TRy9JbNsxYM54f/0t3q7vbvVM58tIj+5e9ADjnTlT1HMBlBM7nM3+q+gxgZWb83726ADjnPonIDxFxqnoyZR3AUlUXIYSHHhSTAHhjEfmlqjc9xvI9ABgJb2Z/ps42ATjnLkTkXlX5PHgBmJnZXctAFUB0/rgr3L2oANyZ2ay2fwtADPuTqjLv77YA3JrZojS4BcB7byLyNW3kQRHhOxbgXEQ+7ihCFt+cbPDeI7PzKiJXZU2MADjnblT1viimz/kh59yGeiXdau+990sR+ZKBWJrZVW5/BKA8wI0ARgD2yUnD3lkOfgBArqvq39IBAIaNN9l7ee9JxVHKADyY2UDrHMBcVSk2+VqHEA6mYSOlr2Z2mpwMABrhopCwAA9e3nsK0XlRV6dmxqL83wsaAIaNhyIoWRXrakhrHoGBMslZCKGrV0yBc85tpTbXhBwAQ/IhN/ZOAH6r6rciBUNqd9XAwQxIDhs1sJ0C59xCVa8LpE0N76mJFrXzyE7SEADTQiHaa8jIbj+S9fj+JYQw9JkcwIWqPlWEiDRizvYCUYtoZEBdiPgxo+IaAIuHLXTDYQBMESedVSv8sY1T+2etbgqgLsU0SgMpCgQgIj9VlTKcCwnBXSYhSWBqdKtEc3T7kRBlhoZiBODjwEkQG4oC+G5mBLe18vZb+17evgWAk+/m1pzrzOwsRodtmDrenPFqzScB6R5IorMcBKfcOYB1MlaGP6v6Uf/f5bwagSwVA4hCG5ri1Ogn1VEs2ewZy1nRZEOqgV4AKwAczSZnia5mEwdV0vJ6akKKEWCh7nTcFYEeuX3rnq4IvNXJ1PmjA/gHoeSlMOUIAeQAAAAASUVORK5CYII=" alt=""></a>
-                        <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACP0lEQVRYR72X/VHkMAzF9Sq4pQKWCg4qACo4uQKgguMqgKuA6wCuAosKgAqACqAEqEA3LxNnkqzzdUnwPzuzsa2fpSdLhswYqnoI4Bu3iDE+/c9WmLJIVTciciYi5wAO22vd/V1EHkXkr5nxd3CMBlDVcxG5AUCIweHuBAhm9tE3eRQAjQO4HbTamuDuNH5qZi9dawcBVFUBxKnG0/wyLEddnugFKGP+NtbtXZDu/tvMrnPfhwDuAFB0s0YZioOcFzoBljp9LRQXZnbXPkkfwKzYZ1KUqclMaow+gGsAV7N831z8FGM8mQKwSPzrBt19r62DTg+EEHzB0xdb5bIhCzA393vAd8LQBbB0/BPTa4yxUUOyACEEE5EfS4dARO5jjFrfdwdAVRcXX0uIrA1VpWwAqOofAD9XOHm1pbu/mNlR+qMCUNUTAA9rGs/dihVACIHNxP4XATya2SltFQBla/X8FcZrXmBxek8Aa6Vd55ncvRBjAlhV+TmKdCsWALW8/3R3ZsKSRahu/1VEvpfXMvtFSx64BHDj7hfsagG8raEHFiMA7A/33b2hAXa6G4qiFOXi94G7F/0ABS8iW56+yoLcaUMIJC3ctcBgaGl0p0Xva0hIept7gEwFcne2Yr9GA4QQeFcfTzXUN79sTCm8xospV4y2K4rww8z2hqrhBgDFWDw6B8aniFArDNeY+aMbEm7I1GTtzm1MUVHFlymu7KJ4qwPYtsJXQFIHk9rydPLyfVDvYujGzrfekMva3/8BHBoYMBvLO6AAAAAASUVORK5CYII=" alt=""></a>
-                        <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC3klEQVRYR81X0VEbMRDdrYB0EKggpoKYCrKqIKaCOBWEVABUgFOB1hUQKoBUAO4gqWAzTyNpdDqdL3I8A/qB8Z2kt2/fvt1jeuXFr3w/vV0AInJKRJ+PxNCDqv5sndVkQERumPnLkS4Px5gZADhV/V2eOwIgIlfM/O2Ay3dE9EJECyI6ae0HCFW9mAQA2pn5ufdyM/uqqjfYJyLviAgMNtNnZpequkl3DBgQkTUzX88A+GNmysyCSM3su6pe1Xucc09E9KH+3cx+qOpqCsAc/VszWyGPIrJi5jszu4DARASA7ogI4NTMNswMNur14L1fdgMokUea75l5kegXEVz4L1XTD6C6HCLD5SG6lAIRWTIzcvt+JoV7AbTKb+e9hydAYMjddXH5LQSnqlB/WBHImog+TQCZBuCcQ61+LDcm1YpIGTmEuFRVCK25pgRtZk+qet7UQANAjr58VoBCGpD3LViIDJ2oKpgBG01D897n6huUYQ0g5b7yhxKUgupCiKkyblV1DbEyM9IzMKYeAKHGUWLM7CNtIYcVqK33Hq9lIyvKc8TCIQBKf0gAoPr7WAkvqnqG/51zVlVHCT7E8F8AzKy8DPSi7AIDFYDgeLEqAtC0egCkXOZoY3TJ/VAZcLVN6Y5VqgZ7exnIJeOcQxsNYkIpERFA5NZalSnemWIgixhn1c1oZKdmdhZLbNAnkApEDpXDE5g5N5iKpbrB9VlxEQlKCkY16nANJyo1UZtbH4AYzTlcL9b1HIhf0SXRMUf5J6KDACDXSAUOhfuBVvh9aTA7tOA0G8T3nhstuR9AITxMM9n/4+B6Wg+cUZCemUMTq1ZOT0uEC2Z+nOgv4Wczw/QDhecOmN6PUWOYBUOtYQT78/g2AhCNJPj7PhARCLSQRm34AWwYf/ctpGlRlm9rKu5R+xzO8nmzhU9+GcWZD3TPTThzIHAxJmYMLoNvgmYK5k479vO3+2147EinzvsLvK4mP3FHy68AAAAASUVORK5CYII=" alt=""></a>
-                    </div>
-                </div>
-                <div class="recommend-part">
-                    <h3>作品推荐</h3>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
+    <div id="dowebok">
+        <div class="section page1">
+            <div class="baseInfo"><img src="img/2.png" alt="">
+                <h2>刘 瑶</h2>
+                <ul>
+                    <li>喜欢钻研新技术，对前端饱有热情</li>
+                    <li>web前端开发</li>
+                    <li>miku561@163.com</li>
+                </ul>
             </div>
         </div>
-    </main>
-    <footer>
-        <p>CopyRight &copy; 2016 miku61</p>
-        <p><a href="http://www.miibeian.gov.cn/">	黔ICP备16000698号-1</a></p>
-    </footer>
+        <div class="section page2 active">
+            <h2>成长经历</h2>
+            <ul>
+                <li>
+                    <div class="part">
+                        <span class="time">2015,8-2016.7</span>
+                        <p>贵州小弟网络科技有限公司</p>
+                    </div>
+                    <div class="detail">
+
+                    </div>
+                </li>
+                <li>
+                    <div class="part">
+                        <span class="time">2016,8-2017.1</span>
+                        <p>上海万序计算机科技有限公司</p>
+                    </div>
+                    <div class="detail"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="section page3">
+            <h2>技术栈</h2>
+            <ul>
+                <li>HTML+CSS,Bootstrap,sass</li>
+                <li>Javascript,jquery</li>
+                <li>对Vue有所了解,有兴趣钻研React及Angular</li>
+                <li>webpack,gulp</li>
+                <li>Photoshop,Axure</li>
+            </ul>
+        </div>
+        <div class="section page4">
+            <h2>教育经历</h2>
+            <p>贵阳学院 本科 信息与计算科学</p>
+            <p>其他: 有过C语言基础，毕设：Mysql+php完成了一个简单的电商珠宝网站。</p>
+        </div>
+    </div>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
