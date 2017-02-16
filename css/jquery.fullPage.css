@@ -216,5 +216,6 @@ ul{margin: 0;padding: 0;}
 }
 .section{text-align: center;}
 .page1{position: relative;}
+.page1{text-align:left;}
 .baseInfo{position: absolute;top: 45%;left: 50%; transform: translate(-50%,-50%);}
 .baseInfo img{ border-radius: 50%;max-width: 200px;}
